@@ -3,7 +3,4 @@ layout: default
 title: Stephan Meylan
 ---
 
-{% include content.md %}
-		
-
-
+{% include bio.md %}
