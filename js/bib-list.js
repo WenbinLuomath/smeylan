@@ -2565,7 +2565,7 @@ var bibtexify = (function($) {
                         }
                         itemStr += value[index].last + ", " + value[index].first;
                     }
-                    itemStr += '}';
+                    itemStr += '},<br />';
                 } else if (key != 'entryType' && key != 'cite') {
                     itemStr += '  ' + key + " = {" + value + "},<br />";
                 }
@@ -2597,6 +2597,13 @@ var bibtexify = (function($) {
           return itemStr;
         },
         // helper functions for formatting different types of bibtex entries
+        
+        noproceedings: function(entryData) {
+            return this.authors2html(entryData.author) + " (" + entryData.year + "). " +
+                entryData.title + ". " + entryData.booktitle +
+                ((entryData.address)?", " + entryData.address:"" + ".");
+        },
+
         inproceedings: function(entryData) {
             return this.authors2html(entryData.author) + " (" + entryData.year + "). " +
                 entryData.title + ". In <em>" + entryData.booktitle +
@@ -2605,7 +2612,7 @@ var bibtexify = (function($) {
         article: function(entryData) {
             return this.authors2html(entryData.author) + " (" + entryData.year + "). " +
                 entryData.title + ". <em>" + entryData.journal + ", " + entryData.volume +
-                ((entryData.number)?"(" + entryData.number + ")":"")+ ", " +
+                ((entryData.number)?" (" + entryData.number + ")":"")+ ", " +
                 "pp. " + entryData.pages + ". " +
                 ((entryData.address)?entryData.address + ".":"") + "<\/em>";
         },
@@ -2660,12 +2667,13 @@ var bibtexify = (function($) {
         },
         // labels used for the different types of entries
         labels: {
-            'article': 'Journal',
+            'article': 'Journal Article',
             'book': 'Book',
             'conference': 'Conference',
             'inbook': 'Book chapter',
             'incollection': '',
-            'inproceedings': 'Conference',
+            'inproceedings': 'Conference Proceeding',
+            'noproceedings': 'Conference Presentation',
             'manual': 'Manual',
             'mastersthesis': 'Thesis',
             'misc': 'Misc',
