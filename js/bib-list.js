@@ -2610,11 +2610,17 @@ var bibtexify = (function($) {
                 ((entryData.address)?", " + entryData.address:"") + ".<\/em>";
         },
         article: function(entryData) {
-            return this.authors2html(entryData.author) + " (" + entryData.year + "). " +
+            if (entryData.number){ 
+                articleString = this.authors2html(entryData.author) + " (" + entryData.year + "). " +
                 entryData.title + ". <em>" + entryData.journal + ", " + entryData.volume +
                 ((entryData.number)?" (" + entryData.number + ")":"")+ ", " +
                 "pp. " + entryData.pages + ". " +
                 ((entryData.address)?entryData.address + ".":"") + "<\/em>";
+            } else {    
+                articleString = this.authors2html(entryData.author) + " (" + entryData.year + "). " +
+                entryData.title + ". <em>" + entryData.journal + ".";
+            }    
+            return articleString
         },
         misc: function(entryData) {
             return this.authors2html(entryData.author) + " (" + entryData.year + "). " +
@@ -2718,7 +2724,7 @@ var bibtexify = (function($) {
         for (var index = 0; index < len; index++) {
             var item = bibtex.data[index];
             if (!item.year) {
-              item.year = this.options.defaultYear || "To Appear";
+              item.year = this.options.defaultYear || "Accepted";
             }
             var html = bib2html.entry2html(item, this);
             bibentries.push([item.year, bib2html.labels[item.entryType], html]);
