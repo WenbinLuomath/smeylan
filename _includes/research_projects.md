@@ -1,4 +1,4 @@
-In my research, I use computational models of concept learning and language processing as well as distributional represenations of semantics. I collect data from web experiments on [Amazon Mechanical Turk](https://www.mturk.com/mturk/welcome) and make extensive use of natural language corpora including [CHILDES](http://childes.psy.cmu.edu/), [Speechome](http://www.media.mit.edu/cogmac/projects/hsp.html), SWITCHBOARD, the [British National Corpus](http://www.natcorp.ox.ac.uk/), OPUS, and [Google N-grams](http://storage.googleapis.com/books/ngrams/books/datasetsv2.html).
+In my research, I use computational models to investigate human language processing and first language acquisition. I collect data from web experiments on [Amazon Mechanical Turk](https://www.mturk.com/mturk/welcome) and make extensive use of natural language corpora including [CHILDES](http://childes.psy.cmu.edu/), [Speechome](http://www.media.mit.edu/cogmac/projects/hsp.html), SWITCHBOARD, the [British National Corpus](http://www.natcorp.ox.ac.uk/), OPUS, and [Google N-grams](http://storage.googleapis.com/books/ngrams/books/datasetsv2.html).
 
 Five specific questions I'm working on right now are:
 
@@ -6,4 +6,3 @@ Five specific questions I'm working on right now are:
 2. Can we track early word learning—a larger vocabulary with higher temporal resolution—using smartphones? (joint work with Michael C. Frank and Mika Bragisky) 
 3. How does the phonological structure of low frequency words facilitate word recognition? (joint work with [Tom Griffiths](http://cocosci.berkeley.edu/tom/index.html))
 4. How do children infer that there are multiple distinct senses for a given word (e.g., a "bat" can refer to a flying mammal or a piece of sports equipment)? How do they determine how senses relate to one another, and can new words can be used in similar ways? (joint work with [Mahesh Srinivasan](http://psychology.berkeley.edu/people/mahesh-srinivasan) and Tom Griffiths)
-5. How might children learn word meanings using co-occurrence statistics for 1) words with other words and 2) words with things in their environment? (joint work with Tom Griffiths)
