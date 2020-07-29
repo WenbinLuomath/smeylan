@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Stephan Meylan
+title: Dr. Stephan Meylan, Ph.D.
 ---
 
 {% include bio.md %}
