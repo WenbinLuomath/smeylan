@@ -34,27 +34,16 @@ Children successfully apply a +s rule to derive novel plurals (nops, teps) long 
 </div>
 </div>		
 
-<h2>Robust Speech Processing in Adults</h2>
 
-<div class="row">
-<div class="col-md-8">
-**Telephone** is a web-based experimental platform for running large-scale audio-based games of telephone with adult participants. This process of reptition—called *serial transmission* by researchers—yields datasets with very special statistical properties that can provide valuable insights regarding the mechanisms underlying human speech regconition. The yielded data is especially useful for evaluating probabilistic models of language structure, and can even be used as a data source for constructing better speech recognition models. Joint work with [Sathvik Nair](https://sathvikn.github.io) and [Dr. Tom Griffiths](https://psych.princeton.edu/person/tom-griffiths).
-</div>
-<div class="col-md-4">
-![portrait](images/telephone.png){:style="float: right;margin-right: 0px; margin-left: 20px; margin-top: 0px; width: 300px"}
-</div>
-</div>		
-
-
-<h2>Caregiver Contributions to L1 Language Learning</h2>
+<h2>Caregiver Contributions to First Language Learning</h2>
 <div class="row">
 <div class="col-md-8">
 
-While the phenomenon of "child-directed speech" has received considerable attention, how adults <i>listen</i> to children is much less well understood.  This is potentially especially important in that adult interpretations (and actions) may be the key to understanding how children's goal-driven behaviors (like locomotion and grasping) come to include language use. In this work, we show the prevalence of adult recoveries of words that are inconsistent with what children actually said, and demonstrate that this is consistent with a neural model of adult linguistic expectations.
+While the phenomenon of "child-directed speech" has received considerable attention, how adults <i>listen</i> to children is much less well understood.  This may be especially important in that adult interpretations (and actions) may be the key to understanding how children's goal-driven behaviors (like locomotion and grasping) come to include language use. In this work, we show that a Bayesian model of spoken word recognition can capture adult interpretations of children's speech -- and depends heavily on surrounding linguistic context. 
 <br />
 <br />
 <p style="margin-left: 40px">
-<i><b>Meylan, S.C.</b>, Bergelson, E., and Levy, R.P. (2020). Characterizing Child-Directed Listening with Corpus and Model-based Analyses. 22nd Biennial International Conference of Infant Studies. ([pdf](https://stephanmeylan.com/resources/smeylan_characterizing_cdl_icis2020.pdf), [15-min talk on YouTube](https://youtu.be/Fg461HyyQtQ)) </i>
+<i><b>Meylan, S.C.</b>, Bergelson, E., and Levy, R.P. (2021). Meylan, S.C., Foushee, R., Bergelson, E., and Levy, R.P. (2021). Child-directed Listening: How Caregiver Inference Enables Children's Early Verbal Communication. In </i>Proceedings of the 43rd Annual Meeting of the Cognitive Science Society. <i>([pdf](https://arxiv.org/abs/2102.03462))</i>
 </p>
 
 
@@ -65,6 +54,21 @@ While the phenomenon of "child-directed speech" has received considerable attent
 </div>		
 
 
+<h2>Robust Speech Processing in Adults</h2>
+
+<div class="row">
+<div class="col-md-8">
+**Telephone** is a web-based experimental platform for running large-scale audio-based games of telephone with adult participants. This process of reptition—called *serial transmission* by researchers—yields datasets with very special statistical properties that can provide valuable insights regarding the mechanisms underlying human speech regconition. The yielded data is especially useful for evaluating probabilistic models of language structure, and can even be used as a data source for constructing better speech recognition models. Joint work with [Sathvik Nair](https://sathvikn.github.io) and [Dr. Tom Griffiths](https://psych.princeton.edu/person/tom-griffiths).
+<br />
+<br />
+<p style="margin-left: 40px">
+<i><b>Meylan, S.</b>, Nair, S., and Griffiths, T. (2021). Evaluating models of robust word recognition with serial reproduction. </i>Cognition<i>. ([link](https://arxiv.org/abs/2101.09788))</i>
+</p>
+</div>
+<div class="col-md-4">
+![portrait](images/telephone.png){:style="float: right;margin-right: 0px; margin-left: 20px; margin-top: 0px; width: 300px"}
+</div>
+</div>		
 
 
 <h2>Tools for Studying Early Language Acquisition</h2>

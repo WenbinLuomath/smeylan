@@ -9,8 +9,8 @@ In 2018, I completed my Ph.D. in the [Computational Cognitive Science Lab](http:
 My primary research goals are:
  
  1. To characterize the origins and uses of abstract linguistic knowledge in early development
- 2. to improve machine representations of word and utterance meaning 
+ 2. To understand the error signals available to children for revising linguistic knowledge
  3. To characterize how structural features of natural languages are shaped by pressures from inference, especially learnability and real-time communication
 
-I am particularly interested in how children learn and use so-called "function" or "closed-class" words (articles, pronouns, prepositions, etc.) and inflectional morphology (systematic markings for number, gender, etc.).
+I am particularly interested in how children learn and use so-called "function" or "closed-class" words (articles, pronouns, prepositions, etc.) and inflectional morphology (systematic markings for number, gender, etc.), as well as the role of adult inference in supporting communication between children and adults.
 See [Publications](/publications) and [Projects](/projects) for more details.
