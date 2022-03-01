@@ -3,3 +3,4 @@ permalink: /blog/:year/:month/:day/:title
 kramdown:
   # parse markdown inside block-level HTML tag
   parse_block_html: true
+google_analytics: G-7T0QS1QNV5

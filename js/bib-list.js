@@ -2535,25 +2535,72 @@ var bibtexify = (function($) {
                 }    
                 authorsStr += ", and ".concat(authorData[authorData.length - 1].last, ', ',processFirstName(authorData[authorData.length - 1].first));
             }
-            return htmlify(authorsStr);
+            return htmlify(authorsStr).replace('Meylan, S.C.','<b>Meylan, S.C.</b>').replace('Meylan, S.','<b>Meylan, S.</b>');
         },
         // adds links to the PDF or url of the item
         links: function(entryData) {
-            var itemStr = '';
-            if (entryData.url && entryData.url.match(/.*\.pdf/)) {
-                itemStr += ' (<a title="PDF-version of this article"  target="_blank" href="' +
-                            entryData.url + '">pdf<\/a>)';
-            } else if (entryData.url) {
-                itemStr += ' (<a title="This article online" href="' + entryData.url +
-                            '">link<\/a>)';
+            // !!! around here, add logic for handling the different kinds of URLs
+
+            var long_url_type_names = {
+                journal_url: "URL for published journal version",
+                official_url: "archival conference version",
+                preprint_url: "URL for preprint",                
+                authors_url: "URL for author's copy",
+                abstract_url: "URL for the abstract",
+                osf_url: "URL for project data repository",
+                code_url: "URL for code repostiory (usually Github)",
+                data_url: "URL for data",
+                model_url: "URL for model",
+                project_website_url: "URL for project website"
             }
+
+            var short_url_type_names = {
+                journal_url: "publisher version",
+                authors_url: "author version",
+                preprint_url: "preprint",
+                abstract_url: "abstract",
+                official_url: "official version",
+                osf_url: "osf repo",
+                code_url: "code",
+                data_url: "data",
+                model_url: "model",
+                project_website_url: "project website"
+            }
+
+            // publications
+            const pub_types = ['journal_url','official_url','preprint_url','authors_url','abstract_url']
+            var itemStr = '<br /><span class="pub-links">';
+            for (const url_type of pub_types) {
+                if (url_type in entryData){
+                    itemStr += ' <a title="'+long_url_type_names[url_type]+'"  target="_blank" href="' +
+                            entryData[url_type] + '"><i>'+short_url_type_names[url_type]+'</i><\/a>';
+                }
+
+            }            
+            itemStr += '</span>'
+
+
+            // supporting material
+            const materials_types = ['code_url','osf_url','data_url','model_url','project_website_url']
+            itemStr += '<span class="materials-links">';
+            for (const url_type of materials_types) {
+                if (url_type in entryData){
+                    itemStr += ' <a title="'+long_url_type_names[url_type]+'"  target="_blank" href="' +
+                            entryData[url_type] + '"><i>'+short_url_type_names[url_type]+'</i><\/a>';
+                }
+
+            }            
+            itemStr += '</span>'
+
+
+
             return itemStr;
         },
         // adds the bibtex link and the opening div with bibtex content
         bibtex: function(entryData) {
-            var itemStr = '';
-            itemStr += ' (<a title="This article as BibTeX" href="#" class="biblink">' +
-                        'bib</a>)<div class="bibinfo hidden">';
+            var itemStr = '<span class="bib-links">';
+            itemStr += ' <a title="This article as BibTeX" href="#" class="biblink">' +
+                        '<i>bibtex</i></a><div class="bibinfo hidden"></span>';
             itemStr += '<a href="#" class="bibclose" title="Close">x</a><p class="bibtexitem">';
             itemStr += '@' + entryData.entryType + "{" + entryData.cite + ",\n";
             $.each(entryData, function(key, value) {
@@ -2610,16 +2657,14 @@ var bibtexify = (function($) {
                 ((entryData.address)?", " + entryData.address:"") + ".<\/em>";
         },
         article: function(entryData) {
-            if (entryData.number){ 
+            if (entryData.journal){                 
                 articleString = this.authors2html(entryData.author) + " (" + entryData.year + "). " +
-                entryData.title + ". <em>" + entryData.journal + ", " + entryData.volume +
-                ((entryData.number)?" (" + entryData.number + ")":"")+ ", " +
-                "pp. " + entryData.pages + ". " +
-                ((entryData.address)?entryData.address + ".":"") + "<\/em>";
-            } else {    
+                entryData.title + ". <em>" + entryData.journal + ".<\/em>";
+            }   else {
                 articleString = this.authors2html(entryData.author) + " (" + entryData.year + "). " +
-                entryData.title + ". <em>" + entryData.journal + ".";
-            }    
+                entryData.title + "."
+            }
+
             return articleString
         },
         misc: function(entryData) {
@@ -2724,10 +2769,11 @@ var bibtexify = (function($) {
         for (var index = 0; index < len; index++) {
             var item = bibtex.data[index];
             if (!item.year) {
-              item.year = this.options.defaultYear || "Accepted";
+              item.year = this.options.defaultYear || "Under Review";
             }
             var html = bib2html.entry2html(item, this);
-            bibentries.push([item.year, bib2html.labels[item.entryType], html]);
+            //bibentries.push([item.year, bib2html.labels[item.entryType], html]);
+            bibentries.push([item.year, html]);
             entryTypes[bib2html.labels[item.entryType]] = item.entryType;
             this.updateStats(item);
         }
@@ -2743,10 +2789,10 @@ var bibtexify = (function($) {
         };
         var table = this.$pubTable.dataTable({ 'aaData': bibentries,
                               'aaSorting': this.options.sorting,
-                              'aoColumns': [ { "sTitle": "Year" },
-                                             { "sTitle": "Type", "sType": "type-sort", "asSorting": [ "desc", "asc" ] },
+                              'aoColumns': [ { "sTitle": "Year", "sType":"html", "asSorting": ["asc"]},
                                              { "sTitle": "Publication", "bSortable": false }],
-                              'bPaginate': false
+                              'bPaginate': false,
+                              "bFilter": false
                             });
         if (this.options.visualization) {
             this.addBarChart();

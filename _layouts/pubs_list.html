@@ -8,10 +8,40 @@ layout: default
 <link rel = "icon" href = "images/favicon.png" type = "image/x-icon"> 
 <br />
 <br />
-<table id="pubTable" class="display"></table>
+<table class="display">
+	<tr>
+		<td>
+			<h2>Journal Articles</h2>
+		</td>
+	</tr>
+</table>
+<table id="journalTable" class="display"></table>
 <script type="text/javascript">
-bibtexify("210728_cleaned.bib", "pubTable");
+bibtexify("220301_journals_cleaned.bib", "journalTable");
 </script>
+<table class="display">
+	<tr>
+		<td>
+			<h2>Conference Proceedings</h2>
+		</td>
+	</tr>
+</table>
+<table id="proceedingsTable" class="display"></table>
+<script type="text/javascript">
+bibtexify("220301_proceedings_cleaned.bib", "proceedingsTable");
+</script>
+<table class="display">
+	<tr>
+		<td>
+			<h2>Conference Abstracts and Posters</h2>
+		</td>
+	</tr>
+</table>
+<table id="noproceedingsTable" class="display"></table>
+<script type="text/javascript">
+bibtexify("220301_noproceedings_cleaned.bib", "noproceedingsTable");
+</script>
+
 <br />
 <center>
 <h3>	
