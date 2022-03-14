@@ -14,6 +14,6 @@ My primary research goals are:
  4. To understand how langauges are shaped by cognitive constraints, especially the need for efficient realtime prediction
  
 
-See [Publications](/publications) and [Researc Topics](/research) for more details.
+See [Publications](/publications) and [Research Topics](/research) for more details.
 
 With the exception of the occasional talk or publication thread on Twitter, you won't find me on social media—I left in 2012 after deciding I didn't really like the vision on offer. I spend my non-academic time doing large format film photography, running a clandestine visual+literary arts collective, backpacking (esp. the Sierras), reading culutural criticism, hosting frighteningly frequent dinner parties (I have a standing offer to cook anything anyone brings me), and tending to my bi-coastal unruly jungle of houseplants. I use he/him pronouns.
