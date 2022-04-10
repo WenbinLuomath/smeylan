@@ -11,7 +11,7 @@ My primary research goals are:
  1. To understand how kids learn language, especially the origins and uses of abstract linguistic knowledge in early development
  2. To reimagine language acquisition as fundamentally goal-driven and motoric, and to understand the contributions of adult inference to children realizing their goals 
  3. To understand how adults robustly understand language through rich multi-modal models of the world, and in turn use language to revise those models
- 4. To understand how langauges are shaped by cognitive constraints, especially the need for efficient realtime prediction
+ 4. To understand how languages are shaped by cognitive constraints, especially the need for efficient realtime prediction
  
 See [Publications](/publications) and [Research Topics](/research) for more details.
 
