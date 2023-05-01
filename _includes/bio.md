@@ -2,17 +2,16 @@
 
 ![portrait](images/portrait.jpg){:style="float: right;margin-right: 0px; margin-left: 20px; margin-top: 0px; width: 300px"}
 
-I am a Postdoctoral Fellow in the [Computational Psycholinguistics Lab](http://cpl.mit.edu) (PI: [Dr. Roger Levy](http://www.mit.edu/~rplevy/index.html)) in the Department of Brain and Cognitive Sciences at MIT who studies [language learning and language processing](/research). From 2018 to 2019, I was a Postdoctoral Associate in the [Bergelson Lab](http://bergelsonlab.com) (PI: [Dr. Elika Bergelson](https://psychandneuro.duke.edu/people/elika-bergelson)) in the department of Psychology and Neuroscience at Duke University, where I still hold a postdoctoral appointment. Since 2019, I have been funded by an NIH F32 grant to better understand English-learning children's earliest word composition as a collaboration between the above two labs.  
+I am a computational cognitive scientist who focuses on reverse engineering how children learn language, both to support the development of machine intelligence and to guide educational practice and policies. More specifically, I work on:
 
-In 2018, I completed my Ph.D. in the [Computational Cognitive Science Lab](http://cocosci.berkeley.edu) at UC Berkeley (Advisor: [Dr. Tom Griffiths](https://psych.princeton.edu/person/tom-griffiths)), focusing on understanding language learning and language processing with probabilistic models. Before that, I worked as a post-bacalaurreate research assistant at Stanford, a data scientist at a crowdsourcing startup, and as a geospatial data analyst at the U.S. Geological Survey.
+1. Understanding how children and adults communicate and coordinate to solve progressively more complex problems
+2. Understanding how children's linguistic and non-linguistic knowledge iteratively builds to support the above, and
+3. Characterizing how adults process language, as the end state of the above learning problem.
 
-My primary research goals are:
- 
- 1. To understand how kids learn language, especially the origins and uses of abstract linguistic knowledge in early development
- 2. To reimagine language acquisition as fundamentally goal-driven and motoric, and to understand the contributions of adult inference to children realizing their goals 
- 3. To understand how adults robustly understand language through rich multi-modal models of the world, and in turn use language to revise those models
- 4. To understand how languages are shaped by cognitive constraints, especially the need for efficient realtime prediction
- 
-See [Publications](/publications) and [Research Topics](/research) for more details.
+I make heavy use of computational models (neural networks and Bayesian probabilistic models) and my work is distinguished by an emphasis on multi-agent and multi-task learning contexts. I am deeply preoccupied with [Moravec's Paradox](https://en.wikipedia.org/wiki/Moravec's_paradox). I also use experimental methods like eyetracking to characterize children's knowledge. See [Publications](/publications) and [Research Topics](/research) for more details.
 
-With the exception of the occasional talk or publication thread on Twitter, you won't find me on social media—I left in 2012 after deciding I didn't really like the vision on offer. I spend my non-academic time doing large format film photography, running a clandestine visual+literary arts collective, backpacking (esp. the Sierras), reading cultural criticism, hosting frighteningly frequent dinner parties (I have a standing offer to cook anything anyone brings me), and tending to my bi-coastal unruly jungle of houseplants. I use he/him pronouns.
+I'm currently a postdoc at MIT Brain and Cognitive Sciences (in [Dr. Roger Levy](http://www.mit.edu/~rplevy/index.html)'s Computational Psycholinguistics Lab), and hold a joint appointment at Duke University ([Dr. Elika Bergelson child language lab]((http://bergelsonlab.com)), moving Fall 2023 to Harvard).
+In 2018, I completed my Ph.D. in the [Computational Cognitive Science Lab](http://cocosci.berkeley.edu) at UC Berkeley (with [Dr. Tom Griffiths](https://psych.princeton.edu/person/tom-griffiths)) on understanding language learning and language processing with probabilistic models. Before that, I was a post-bac research at Stanford (with [Dr. Mike Frank](https://langcog.stanford.edu)). My work has been funded by the NIH, NSF, U.S. Air Force Office of Scientific Research, DARPA, and the Simons Foundation.
+
+In previous live, I was a data scientist at a crowdsourcing startup and a geospatial data analyst at the U.S. Geological Survey, where I worked on tools for characterizing ocean acidification. I spend my non-academic time on large-format film photography, backpacking and trekking, scuba diving, biking, vegetable gardening, and reading cultural criticism.
+
