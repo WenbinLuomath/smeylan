@@ -1,8 +1,42 @@
-My research explores the application of probabilistic models of language learning and language processing---broadly Bayesian and neural network models---to longstanding questions in cognitive science, linguistics, and developmental psychology. This includes [understanding early linguistic productivity](#ling-prod), the [contributions of caregivers' language processing to first language learning](#caregiver-contributions), [robust speech processing in adults](#speech-processing-adults), the [developmental origins and representations of multiple meanings per word](#multiple-meanings), and the [quantitative linguistic universals](#quant-universals) that emerge from the demands of realtime processing.
+My research explores the application of probabilistic models of language learning and language processing---broadly Bayesian and neural network models---to longstanding questions in cognitive science, linguistics, and developmental psychology. This includes [modeling interaction in child language learning](#early-interaction), [understanding early linguistic productivity](#ling-prod), [robust speech processing in adults](#speech-processing-adults), the [developmental origins and representations of multiple meanings per word](#multiple-meanings), and the [quantitative linguistic universals](#quant-universals) that emerge from the demands of realtime processing.
 
 I also work on a variety of [tools and infrastructure projects](#tools) to enable faster data exploration and reproducible science. I also work on new platforms to gather dense longitudinal data from broader populations, especially for questions regarding first language acquisition.
 
+<a id="early-interaction">
+<h2>Modeling Interaction in Child Language Learning</h2>
+<div class="row">
+<div class="col-md-8">
+
+<b>Caregiver Contributions to First Language Learning</b> While the phenomenon of "child-directed speech" has received considerable attention, how adults <i>listen</i> to children is much less well understood.  This may be especially important in that adult interpretations (and actions) may be the key to understanding how children's goal-driven behaviors (like locomotion and grasping) come to include language use. In this work, we show that a Bayesian model of spoken word recognition that implements an advanced neural network-based prior can capture adult interpretations of children's speech, while a model using only the acoustics fails to account for the meanings recovered by adults. Joint work with [Dr. Ruthe Foushee](https://ruthefoushee.com), [Dr. Roger Levy](https://www.mit.edu/~rplevy/) and [Dr. Elika Bergelson](https://psychology.fas.harvard.edu/people/elika-bergelson).
+<br />
+<br />
+<p style="margin-left: 40px">
+	<i><b>Meylan, S.C.,</b> Foushee, R., Wong, N., Bergelson, E., and Levy, R.P. (2023). How Adults Understand What Young Children Say. </i>Nature Human Behavior.<i> ([pdf]())</i>
+<br />
+<i><b>Meylan, S.C.,</b> Foushee, R., Bergelson, E., and Levy, R.P. (2021). Child-directed Listening: How Caregiver Inference Enables Children's Early Verbal Communication. In </i>Proceedings of the 43rd Annual Meeting of the Cognitive Science Society. <i>([pdf](https://www.nature.com/articles/s41562-023-01698-3))</i>
+</p>
+
+</div>
+<div class="col-md-4">
+![portrait](images/cdl_overview.png){:style="float: right;margin-right: 0px; margin-left: 20px; margin-top: 0px; width: 300px"}
+</div>
+</div>		
 <hr />
+<div class="row">
+<div class="col-md-8">
+<b>A Multitask, Multimodal Neural Language Learner</b> Recharacterizing the challenge of early communication with the above work invites new models of child language learning. In this work, we explore symbol-free hierarchical reinforcement learning to drive a model vocal tract to name images as processed by an unsupervised vision network. Using "self-play" methods where the child language learning model revises its knowledge of words and articulations by practicing against its own speech recognition system, this model learns to recognize speech and produce speech from a vocal tract model. Hierarchical representations in the model—a convolutional neural net—replicate long-standing units of linguistics representation. Joint work with [Dr. Roger Levy](https://www.mit.edu/~rplevy/) and [Dr. Gasper Begus](https://vcresearch.berkeley.edu/faculty/gasper-begus).
+<br />
+<br />
+
+</div>
+<div class="col-md-4">
+![portrait](images/mnll.png){:style="float: right;margin-right: 0px; margin-left: 20px; margin-top: 0px; width: 300px"}
+</div>
+</div>		
+
+<hr />
+
+
 <a id="ling-prod">
 <h2>Early Linguistic Productivity</h2>
 
@@ -30,7 +64,7 @@ Joint work with [Dr. Michael C. Frank](http://web.stanford.edu/~mcfrank/), [Dr. 
 <div class="col-md-8">
 <b>Children's Acquisition of Morphology</b> While English-learning children begin using the regular plural (+s) in their everyday speech around 20 months, it is less clear whether they use the plural in an adult-like way.
 In this study, we systematically test both what children say as well as what they understand from the speech of others in a lab-based eyetracking experiment.
-We find that children successfully apply a +s rule to derive novel plurals (nops, teps) long before mastering familiar plurals (cats, dogs, etc.), suggesting that generalizations emerge early and play a part in the processes of word learning. Joint work with [Dr. Roger Levy](https://www.mit.edu/~rplevy/) and [Dr. Elika Bergelson](https://dibs.duke.edu/people/elika-bergelson).
+We find that children successfully apply a +s rule to derive novel plurals (nops, teps) long before mastering familiar plurals (cats, dogs, etc.), suggesting that generalizations emerge early and play a part in the processes of word learning. Joint work with [Dr. Roger Levy](https://www.mit.edu/~rplevy/) and [Dr. Elika Bergelson](https://psychology.fas.harvard.edu/people/elika-bergelson).
 <br />
 <br />
 <p style="margin-left: 40px">
@@ -43,24 +77,7 @@ We find that children successfully apply a +s rule to derive novel plurals (nops
 </div>		
 
 <hr />
-<a id="caregiver-contribution">
-<h2>Caregiver Contributions to First Language Learning</h2>
-<div class="row">
-<div class="col-md-8">
 
-While the phenomenon of "child-directed speech" has received considerable attention, how adults <i>listen</i> to children is much less well understood.  This may be especially important in that adult interpretations (and actions) may be the key to understanding how children's goal-driven behaviors (like locomotion and grasping) come to include language use. In this work, we show that a Bayesian model of spoken word recognition that implements an advanced neural network-based prior can capture adult interpretations of children's speech, while a model using only the acoustics fails to account for the meanings recovered by adults. Joint work with [Dr. Ruthe Foushee](https://ruthefoushee.com), [Dr. Roger Levy](https://www.mit.edu/~rplevy/) and [Dr. Elika Bergelson](https://dibs.duke.edu/people/elika-bergelson).
-<br />
-<br />
-<p style="margin-left: 40px">
-<i><b>Meylan, S.C.</b>, Bergelson, E., and Levy, R.P. (2021). Meylan, S.C., Foushee, R., Bergelson, E., and Levy, R.P. (2021). Child-directed Listening: How Caregiver Inference Enables Children's Early Verbal Communication. In </i>Proceedings of the 43rd Annual Meeting of the Cognitive Science Society. <i>([pdf](https://arxiv.org/abs/2102.03462))</i>
-</p>
-
-
-</div>
-<div class="col-md-4">
-![portrait](images/cdl_overview.png){:style="float: right;margin-right: 0px; margin-left: 20px; margin-top: 0px; width: 300px"}
-</div>
-</div>		
 
 <hr />
 <a id="speech-processing-adults">
@@ -131,7 +148,7 @@ A recent prominent result (Piantadosi et al., 2011) found a stronger correlation
 In Meylan & Griffiths (2021, <i>Cognitive Science</i>), I showed that their results emerge from a statistical paradox (Simpson’s paradox), and that the conclusions don’t hold once more robust corpus processing methods and statistical controls are used. 
 <br />
 <br />
-In a related piece (Meylan & Griffiths, “Word forms—not just their lengths—are optimized for efficient communication”, in prep), I showed that the probability of the sound sequences that make up a word, rather than its length in terms of sounds, is the stronger correlate of predictability. This is in part because sound sequences capture historical sound change in more nuanced ways than word length does. 
+In a related piece (Meylan & Griffiths, “Word forms reflect trade-offs between speaker effort and robust listener recognition”, under review), I showed that the probability of the sound sequences that make up a word, rather than its length in terms of sounds, is the stronger correlate of predictability. This is in part because sound sequences capture historical sound change in more nuanced ways than word length does. 
 <br />
 <br />
 <p style="margin-left: 40px">
