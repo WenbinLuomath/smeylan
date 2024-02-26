@@ -2652,9 +2652,17 @@ var bibtexify = (function($) {
         },
 
         inproceedings: function(entryData) {
-            return this.authors2html(entryData.author) + " (" + entryData.year + "). " +
+            
+            if (entryData.booktitle){ 
+            rdata =  this.authors2html(entryData.author) + " (" + entryData.year + "). " +
                 entryData.title + ". In <em>" + entryData.booktitle +
-                ((entryData.address)?", " + entryData.address:"") + ".<\/em>";
+                ((entryData.address)?", " + entryData.address:"") + ".<\/em>"
+            } else {
+                 rdata =  this.authors2html(entryData.author) + " (" + entryData.year + "). " +
+                entryData.title + "."
+            }
+
+            return rdata
         },
         article: function(entryData) {
             if (entryData.journal){                 
