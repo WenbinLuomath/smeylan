@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Dr. Stephan Meylan, Ph.D.
+title: Wenbin Luo, Ph.D.
 ---
 
 {% include bio.md %}
