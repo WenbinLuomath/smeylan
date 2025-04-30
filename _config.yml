@@ -1,4 +1,4 @@
-name: Stephan Meylan
+name: Wenbin Luo
 permalink: /blog/:year/:month/:day/:title
 kramdown:
   # parse markdown inside block-level HTML tag
