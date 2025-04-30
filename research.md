@@ -1,6 +1,6 @@
 ---
 layout: projects
-title: "Stephan Meylan: Research Projects"
+title: "Wenbin Luo: Research Projects"
 ---
 
 {% include research_projects.md %}
