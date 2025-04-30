@@ -2569,7 +2569,7 @@ var bibtexify = (function($) {
                 }    
                 authorsStr += ", and ".concat(authorData[authorData.length - 1].last, ', ',processFirstName(authorData[authorData.length - 1].first));
             }
-            return htmlify(authorsStr).replace('Meylan, S.C.','<b>Meylan, S.C.</b>').replace('Meylan, S.','<b>Meylan, S.</b>');
+            return htmlify(authorsStr).replace('Luo, W.','<b>Luo, W.</b>').replace('Wenbin Luo','<b>Wenbin Luo</b>');
         },
         // adds links to the PDF or url of the item
         links: function(entryData) {
@@ -2701,7 +2701,7 @@ var bibtexify = (function($) {
         article: function(entryData) {
             if (entryData.journal){                 
                 articleString = this.authors2html(entryData.author) + " (" + entryData.year + "). " +
-                entryData.title + ". <em>" + "Vol. <em>"+entryData.volume+", <em>"+"No. <em>"+entryData.number+",<em> pp.<em>"+entryData.pages+",<em>"+entryData.journal + ".<\/em>";
+                entryData.title + ". <em>" + "Vol. <em>"+entryData.volume+", <em>"+"No. <em>"+entryData.number+",<em> pp. <em>"+entryData.pages+", <em>"+entryData.journal + ".<\/em>";
             }   else {
                 articleString = this.authors2html(entryData.author) + " (" + entryData.year + "). " +
                 entryData.title + "."
