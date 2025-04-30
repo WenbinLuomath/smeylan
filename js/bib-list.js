@@ -859,8 +859,8 @@ function BibTex(options)
 			//Currently nothing is done here, but it could for example raise an warning
 		}
 	}
-	this.rtfstring         = 'AUTHORS, "{\b TITLE}", {\i JOURNAL}, YEAR';
-	this.htmlstring        = 'AUTHORS, "<strong>TITLE</strong>", <em>JOURNAL</em>, YEAR<br />';
+	this.rtfstring         = 'AUTHORS, "{\b TITLE}", {\i JOURNAL}, VOLUME, NUMBER, PAGES, YEAR';
+	this.htmlstring        = 'AUTHORS, "<strong>TITLE</strong>", <em>JOURNAL</em>, VOLUME, NUMBER, PAGES, YEAR<br />';
 	this.allowedEntryTypes = array(
 		'article',
 		'book',
@@ -1766,6 +1766,10 @@ BibTex.prototype = {
             title   = '';
             journal = '';
             year    = '';
+	    volume  = '';
+	    number  = '';
+	    pages    = '';
+	    url     = '';
             authors = '';
             if (array_key_exists('title', entry)) {
                 title = this._unwrap(entry['title']);
@@ -1775,6 +1779,18 @@ BibTex.prototype = {
             }
             if (array_key_exists('year', entry)) {
                 year = this._unwrap(entry['year']);
+            }
+	    if (array_key_exists('volume', entry)) {
+                volume = this._unwrap(entry['volume']);
+            }
+	    if (array_key_exists('number', entry)) {
+                number = this._unwrap(entry['number']);
+	    }
+	    if (array_key_exists('pages', entry)) {
+                pages = this._unwrap(entry['pages']);
+            }
+	    if (array_key_exists('url', entry)) {
+                url = this._unwrap(entry['url']);
             }
             if (array_key_exists('author', entry)) {
                 if (this._options['extractAuthors']) {
@@ -1788,10 +1804,14 @@ BibTex.prototype = {
                     authors = entry['author'];
                 }
             }
-            if ((''!=title) || (''!=journal) || (''!=year) || (''!=authors)) {
+            if ((''!=title) || (''!=journal) || (''!=year) || (''!=volume) || (''!=number) || (''!=pages) || (''!=authors)) {
                 line = str_replace("TITLE", title, line);
                 line = str_replace("JOURNAL", journal, line);
                 line = str_replace("YEAR", year, line);
+		line = str_replace("VOLUME", volume, line);
+		line = str_replace("NUMBER", number, line);
+		line = str_replace("PAGES", pages, line);
+		line = str_replace("YEAR", year, line);
                 line = str_replace("AUTHORS", authors, line);
                 line += "\n\\par\n";
                 ret  += line;
@@ -1827,6 +1847,9 @@ BibTex.prototype = {
             var title   = '';
             var journal = '';
             var year    = '';
+	    var volume  = '';
+            var number  = '';
+	    var pages   = '';
             var authors = '';
             if (array_key_exists('title', entry)) {
                 title = this._unwrap(entry['title']);
@@ -1836,6 +1859,15 @@ BibTex.prototype = {
             }
             if (array_key_exists('year', entry)) {
                 year = this._unwrap(entry['year']);
+            }
+            if (array_key_exists('volume', entry)) {
+                volume = this._unwrap(entry['volume']);
+            }
+            if (array_key_exists('number', entry)) {
+                number = this._unwrap(entry['number']);
+            }
+            if (array_key_exists('pages', entry)) {
+                pages = this._unwrap(entry['pages']);
             }
             if (array_key_exists('author', entry)) {
                 if (this._options['extractAuthors']) {
@@ -1854,6 +1886,9 @@ BibTex.prototype = {
                 line = str_replace("TITLE", title, line);
                 line = str_replace("JOURNAL", journal, line);
                 line = str_replace("YEAR", year, line);
+                line = str_replace("VOLUME", volume, line);
+                line = str_replace("NUMBER", number, line);
+                line = str_replace("PAGES", pages, line);
                 line = str_replace("AUTHORS", authors, line);
                 line += "\n";
                 ret  += line;
