@@ -2701,7 +2701,7 @@ var bibtexify = (function($) {
         article: function(entryData) {
             if (entryData.journal){                 
                 articleString = this.authors2html(entryData.author) + " (" + entryData.year + "). " +
-                entryData.title + ". <em>" + "Vol. <em>"+entry.Data.volume+", <em>"+"No. <em>"+entryData.number+",<em> pp.<em>"+entryData.pages+",<em>"+entryData.journal + ".<\/em>";
+                entryData.title + ". <em>" + "Vol. <em>"+entryData.volume+", <em>"+"No. <em>"+entryData.number+",<em> pp.<em>"+entryData.pages+",<em>"+entryData.journal + ".<\/em>";
             }   else {
                 articleString = this.authors2html(entryData.author) + " (" + entryData.year + "). " +
                 entryData.title + "."
