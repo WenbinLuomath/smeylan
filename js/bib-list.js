@@ -1811,7 +1811,6 @@ BibTex.prototype = {
 		line = str_replace("VOLUME", volume, line);
 		line = str_replace("NUMBER", number, line);
 		line = str_replace("PAGES", pages, line);
-		line = str_replace("YEAR", year, line);
                 line = str_replace("AUTHORS", authors, line);
                 line += "\n\\par\n";
                 ret  += line;
@@ -2702,7 +2701,7 @@ var bibtexify = (function($) {
         article: function(entryData) {
             if (entryData.journal){                 
                 articleString = this.authors2html(entryData.author) + " (" + entryData.year + "). " +
-                entryData.title + ". <em>" + entryData.journal + ".<\/em>";
+                entryData.title + ". <em>" + "Vol. <em>"+entry.Data.volume+", <em>"+"No. <em>"+entryData.number+",<em> pp.<em>"+entryData.pages+",<em>"+entryData.journal + ".<\/em>";
             }   else {
                 articleString = this.authors2html(entryData.author) + " (" + entryData.year + "). " +
                 entryData.title + "."
